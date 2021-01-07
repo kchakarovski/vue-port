@@ -1,14 +1,23 @@
 .home {
     display: flex;
-    flex-direction: column;
-    margin-left: 2%;
+
+    .testleft {
+        float: left;
+        margin-left: 5%;
+    }
+
+    .testright {
+        float: right;
+        margin-right: 5%;
+    }
 
     &--title {
         text-shadow: 2px 2px 2px black;
         background: rgb(112, 112, 114);
         padding: 10px 0 10px 30px;
         border-radius: 20px 20px 20px 0;
-        width: 8%;
+        max-width: 45%;
+        min-width: 35%;
         letter-spacing: 1px;
         color: $white;
     }
@@ -21,7 +30,6 @@
 
     i {
         font-size: 45px;
-        padding-top: 5px;
         color: black;
     }
 
@@ -30,7 +38,7 @@
     &--adress {
         font-size: 19px;
         border-bottom: 1px solid;
-        width: fit-content;
+        width: 101%;
     }
 
     &--links {
@@ -43,6 +51,7 @@
         i {
             margin-left: 10px;
             transition: 0.5s;
+            cursor: pointer;
 
             &:hover {
                 background: rgb(112, 112, 114);

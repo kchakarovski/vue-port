@@ -19,6 +19,7 @@
         >Download CV<span class="fa fa-cloud-download"
       /></a>
     </div>
+    <div class="clr" />
   </div>
 </template>
 <script>

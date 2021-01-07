@@ -1,0 +1,49 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 5% 5% 0 5%;
+
+    :nth-child(1) {
+        flex-grow: 1;
+    }
+
+    :nth-child(2) {
+        flex-grow: 0.05;
+    }
+
+    :nth-child(3) {
+        flex-grow: 0.05;
+    }
+
+    :nth-child(4) {
+        flex-grow: 0.05;
+    }
+
+    :nth-child(5) {
+        flex-grow: 0.1;
+    }
+
+    &--title {
+        font-size: 20px;
+        color: rgb(65, 65, 65);
+    }
+
+    &--link {
+        &:nth-child(1) {
+            color: red;
+        }
+    }
+
+    i {
+        font-size: 50px;
+        color: black;
+        transition: 0.5s;
+        &:hover{
+            background: rgb(112, 112, 114);
+            color: white;
+            border-radius: 14px;
+            padding: 5px 12px 5px 12px;
+        }
+    }
+}

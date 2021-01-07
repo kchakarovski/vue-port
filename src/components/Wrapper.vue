@@ -2,7 +2,6 @@
   <div class="wrapper">
     <home />
     <about />
-    <skills />
     <contact />
   </div>
 </template>
@@ -10,7 +9,6 @@
 <script>
 import Home from "./Home";
 import About from "./About";
-import Skills from "./Skills";
 import Contact from "./Contact";
 
 export default {
@@ -18,7 +16,6 @@ export default {
   components: {
     Home,
     About,
-    Skills,
     Contact
   },
   data() {

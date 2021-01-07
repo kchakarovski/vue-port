@@ -1,10 +1,11 @@
 .about {
     margin-top: 1%;
-    margin-left: 2%;
 
     &--sectionleft {
         float: left;
+        margin-left: 5%;
         margin-top: 7%;
+
         &--img {
             border-radius: 4px;
             width: 300px;
@@ -18,24 +19,27 @@
     &--sectionright {
         float: right;
         margin-top: 5%;
-        width: 60%;
-        margin-right: 25px;
+        width: 50%;
+        margin-right: 5%;
     }
 
     &--title {
+        display: flex;
+        justify-content: flex-start;
         font-weight: bold;
         text-shadow: 2px 2px 1px white;
         color: rgb(65, 65, 65);
     }
 
     &--paragraph {
-        font-size: 18px;
+        font-size: 20px;
         text-align: justify;
     }
 
     &--ul {
         display: flex;
         justify-content: space-evenly;
+
         li {
             list-style: none;
             border: 3px solid #4267b2;
@@ -53,6 +57,7 @@
     &--link {
         text-decoration: none;
         color: rgb(65, 65, 65);
+        text-shadow: 2px 2px 1px black;
         background: #4267b2;
         padding: 10px 20px 10px 20px;
         border-radius: 6px;
@@ -60,7 +65,8 @@
         font-weight: bold;
         cursor: pointer;
         transition: 0.5s;
-        &:hover{
+
+        &:hover {
             color: black;
         }
     }
