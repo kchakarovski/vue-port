@@ -11,19 +11,19 @@
 </template>
 <script>
 import AppHeader from "./components/AppHeader";
-import Wrapper from "./components/Wrapper"
+import Wrapper from "./components/Wrapper";
 import AppFooter from "./components/AppFooter";
 export default {
   components: {
     AppHeader,
     Wrapper,
-    AppFooter,
+    AppFooter
   },
 
   name: "App",
   data() {
     return {};
-  },
+  }
 };
 </script>
 <style lang="scss">

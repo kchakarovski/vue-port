@@ -10,7 +10,7 @@
       <i class="fa fa-envelope"></i>
       <p class="home--mail">cakarovskidev@gmail.com</p>
       <i class="fa fa-phone-square"></i>
-      <p class="home--number">+38978415644</p>
+      <p class="home--number">+38978415644<pre></pre></p>
       <i class="fa fa-location-arrow"></i>
       <p class="home--adress">Macedonia, Nikola Karev 19 Resen</p>
     </slot>
@@ -22,7 +22,8 @@
         <i class="fa fa-twitter-square" />
       </div>
     </slot>
-    <img class="home--img" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg">
+    <div class="home--img"></div>
+    <img class="home--img--screenshot" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg">
   </div>
 </template>
 

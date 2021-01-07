@@ -19,10 +19,10 @@ export default {
     Home,
     About,
     Skills,
-    Contact,
+    Contact
   },
   data() {
     return {};
-  },
+  }
 };
 </script>

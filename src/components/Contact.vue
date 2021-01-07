@@ -4,9 +4,9 @@
 
 <script>
 export default {
-    name: "Contact",
+  name: "Contact",
   data() {
     return {};
-  },
+  }
 };
 </script>
