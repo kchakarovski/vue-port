@@ -2,7 +2,7 @@
   <div class="header">
     <ul>
       <li>Home</li>
-      <li>>About</li>
+      <li>About</li>
       <li>Skills</li>
       <li>Contact</li>
     </ul>
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "Header",
+  name: "AppHeader",
   data() {
     return {};
   }

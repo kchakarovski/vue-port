@@ -1,0 +1,21 @@
+.header {
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    li {
+        font-size: 20px;
+        font-weight: bold;
+        transition: 0.7s;
+        color: $brand-primary;
+        cursor: pointer;
+
+        &:hover {
+            font-size: 21px;
+            color: $brand-tertiary;
+            font-weight: bolder;
+        }
+    }
+}
