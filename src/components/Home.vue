@@ -1,5 +1,5 @@
 <template>
-  <div v-if="inputData" :id="inputData.id" class="home">
+  <div v-if="inputData" :id="navData.id" class="home">
     <div class="testleft">
       <slot name="title">
         <h3 class="home--title">Hello I'm</h3>
@@ -42,11 +42,18 @@ export default {
     Links,
   },
   props: {
-    inputData: {
+    navData: {
       type: Object,
       default: () => {
         return {
           id: "#home-section",
+        };
+      },
+    },
+    inputData: {
+      type: Object,
+      default: () => {
+        return {
           links: [
             {
               icon: '<i class="fa fa-facebook-square" />',
