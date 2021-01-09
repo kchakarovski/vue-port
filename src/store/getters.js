@@ -1,4 +1,4 @@
 export default {
-  navigation: state => state.navigation,
-  wrapperInputData: state => state.wrapper,
+  navigationInputData: state => state.navigation,
+  homeInputData: state => state.home,
 };

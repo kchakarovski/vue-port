@@ -17,7 +17,11 @@
         </p>
         <p class="home--adress">Macedonia, Nikola Karev 19 Resen</p>
       </slot>
-      <links @clickedIcon="clickedIcon" />
+      <div class="links">
+        <div v-for="(value, key) in inputData.links" :key="key">
+          <links :inputData="value" @clickedIcon="clickedIcon" />
+        </div>
+      </div>
     </div>
     <div class="testright">
       <div class="home--img"></div>
@@ -43,6 +47,20 @@ export default {
       default: () => {
         return {
           id: "#home-section",
+          links: [
+            {
+              icon: '<i class="fa fa-facebook-square" />',
+              href: "/",
+            },
+            {
+              icon: '<i class="fa fa-facebook-square" />',
+              href: "/",
+            },
+            {
+              icon: '<i class="fa fa-facebook-square" />',
+              href: "/",
+            },
+          ],
         };
       },
     },

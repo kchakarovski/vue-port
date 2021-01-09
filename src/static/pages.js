@@ -9,18 +9,19 @@ export var homeData = {
         contact: {
             id: "#contact-section",
         },
-        links: [{
+        links: [
+            {
                 icon: '<i class="fa fa-facebook-square" />',
-                href: "https://www.facebook.com/",
+                href: "https://www.facebook.com/4aKarcHe/",
             },
             {
                 icon: '<i class="fa fa-instagram" />',
-                href: "www.instagram.com/",
+                href: "https://www.instagram.com/k.chakarovski/",
             },
             {
                 icon: '<i class="fa fa-linkedin-square" />',
-                href: "http://twitter.com/",
+                href: "https://www.linkedin.com/in/kchakarovski",
             },
         ],
     },
-}
+};

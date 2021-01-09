@@ -6,9 +6,9 @@
     />
     <app-header
       @clickedNavigation="clickedNavigation"
-      :inputData="navigation"
+      :inputData="navigationInputData"
     />
-    <wrapper @clickedIcon="clickedIcon" />
+    <wrapper />
     <app-footer />
   </div>
 </template>
@@ -34,19 +34,19 @@ export default {
     return {};
   },
   computed: {
-    ...mapGetters(["navigation"]),
+    ...mapGetters(["navigationInputData"]),
   },
   methods: {
-    ...mapActions(["updateNavigationData", "updateWrapperData"]),
+    ...mapActions(["updateNavigationData"]),
     getData() {
       this.updateNavigationData(navigation);
     },
     clickedNavigation(scroll) {
       document.getElementById(scroll).scrollIntoView({ behavior: "smooth" });
     },
-    clickedIcon(redirect) {
-      window.location.href = "http://www.google.com", redirect;
-    },
+    // clickedIcon(redirect) {
+    //   window.location.href = "http://www.google.com", redirect;
+    // },
   },
 };
 </script>

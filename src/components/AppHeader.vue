@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div v-if="inputData" class="header">
     <div class="header--item" v-for="(value, key) in inputData" :key="key">
       <a class="header--link" v-text="value.name" @click="toggleNavigationItem(value.id)" />
     </div>

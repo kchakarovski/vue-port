@@ -1,6 +1,6 @@
 <template>
-  <div class="wrapper">
-    <home @clickedIcon="clickedIcon" />
+  <div v-if="homeInputData" class="wrapper">
+    <home :inputData="homeInputData.wrapper" @clickedIcon="clickedIcon" />
     <about />
     <contact />
   </div>
@@ -10,6 +10,8 @@
 import Home from "./Home";
 import About from "./About";
 import Contact from "./Contact";
+import { homeData } from "../static/pages";
+import { mapGetters, mapActions } from "vuex";
 
 export default {
   name: "Wrapper",
@@ -18,44 +20,22 @@ export default {
     About,
     Contact,
   },
-  props: {
-    inputData: {
-      type: Object,
-      default: () => {
-        return {
-          home: {
-            id: "#home-section",
-          },
-          about: {
-            id: "#about-section",
-          },
-          contact: {
-            id: "#contact-section",
-          },
-          links: [
-            {
-              icon: '<i class="fa fa-instagram" />',
-              href: "www.google.com",
-            },
-            {
-              icon: '<i class="fa fa-instagram" />',
-              href: "wwww.googl.com",
-            },
-            {
-              icon: '<i class="fa fa-instagram" />',
-              href: "www.google.com",
-            },
-          ],
-        };
-      },
-    },
+  mounted() {
+    this.getData();
   },
   data() {
     return {};
   },
+  computed: {
+    ...mapGetters(["homeInputData"]),
+  },
   methods: {
+    ...mapActions(["updateHomeData"]),
+    getData() {
+      this.updateHomeData(homeData);
+    },
     clickedIcon(redirect) {
-      this.$emit("clickedIcon", redirect);
+      window.location.href = redirect;
     },
   },
 };

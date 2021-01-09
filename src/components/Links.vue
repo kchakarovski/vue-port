@@ -1,27 +1,11 @@
 <template>
   <div class="links">
     <slot name="links">
-      <slot name="icon-fb">
-        <i
-          class="links--icon"
-          v-html="inputData.icon"
-          @click="toggleIconLink(inputData.href)"
-        />
-      </slot>
-      <slot name="icon-insta">
-        <i
-          class="links--icon"
-          v-html="inputData.icon"
-          @click="toggleIconLink(inputData.href)"
-        />
-      </slot>
-      <slot name="icon-linkedin">
-        <i
-          class="links--icon"
-          v-html="inputData.icon"
-          @click="toggleIconLink(inputData.href)"
-        />
-      </slot>
+      <div
+        class="links--icon"
+        v-html="inputData.icon"
+        @click="toggleIconLink(inputData.href)"
+      />
     </slot>
   </div>
 </template>
