@@ -1,4 +1,5 @@
 .home {
+    margin-top: 7.5%;
     display: flex;
 
     .testleft {
@@ -28,11 +29,6 @@
         color: rgb(65, 65, 65);
     }
 
-    i {
-        font-size: 45px;
-        color: black;
-    }
-
     &--mail,
     &--number,
     &--adress {
@@ -41,27 +37,7 @@
         width: 101%;
     }
 
-    &--links {
-        font-size: 50px;
-        padding-top: 15px;
-        padding-right: 10px;
-        color: black;
-        margin-top: 10px;
-
-        i {
-            margin-left: 10px;
-            transition: 0.5s;
-            cursor: pointer;
-
-            &:hover {
-                background: rgb(112, 112, 114);
-                color: white;
-                border-radius: 14px;
-                padding: 7px 12px 7px 12px;
-                margin-left: 5px;
-            }
-        }
-    }
+    &--links {}
 
     &--img {
         &--screenshot {

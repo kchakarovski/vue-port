@@ -1,21 +1,39 @@
 .header {
-    ul {
-        list-style: none;
-        display: flex;
-        justify-content: space-around;
-    }
+    display: flex;
+    justify-content: space-evenly;
 
-    li {
+    &--item {
         font-size: 20px;
         font-weight: bold;
-        transition: 0.7s;
+        transition: 0.4s ease-in-out;
         color: $brand-primary;
-        cursor: pointer;
-
-        &:hover {
-            font-size: 21px;
+        &:hover{
             color: $brand-tertiary;
             font-weight: bolder;
         }
     }
+
+    &--link {
+        cursor: pointer;
+    }
+
+    // ul {
+    //     list-style: none;
+    //     display: flex;
+    //     justify-content: space-around;
+    // }
+
+    // li {
+    //     font-size: 20px;
+    //     font-weight: bold;
+    //     transition: 0.7s;
+    //     color: $brand-primary;
+    //     cursor: pointer;
+
+    //     &:hover {
+    //         font-size: 21px;
+    //         color: $brand-tertiary;
+    //         font-weight: bolder;
+    //     }
+    // }
 }

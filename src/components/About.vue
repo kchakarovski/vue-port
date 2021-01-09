@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div v-if="inputData" :id="inputData.id" class="about">
     <div class="about--sectionleft">
       <img
         class="about--sectionleft--img"
@@ -25,6 +25,16 @@
 <script>
 export default {
   name: "About",
+  props: {
+    inputData: {
+      type: Object,
+      default: () => {
+        return {
+          id: "#about-section",
+        };
+      },
+    },
+  },
   data() {
     return {
       paragraph:

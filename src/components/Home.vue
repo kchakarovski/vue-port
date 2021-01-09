@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div v-if="inputData" :id="inputData.id" class="home">
     <div class="testleft">
       <slot name="title">
         <h3 class="home--title">Hello I'm</h3>
@@ -15,17 +15,9 @@
         <p>
           <i class="fa fa-location-arrow" />
         </p>
-
         <p class="home--adress">Macedonia, Nikola Karev 19 Resen</p>
       </slot>
-      <slot name="links">
-        <div class="home--links">
-          <i class="fa fa-facebook-square" />
-          <i class="fa fa-instagram" />
-          <i class="fa fa-linkedin-square" />
-          <i class="fa fa-twitter-square" />
-        </div>
-      </slot>
+      <links @clickedIcon="clickedIcon" />
     </div>
     <div class="testright">
       <div class="home--img"></div>
@@ -34,15 +26,34 @@
         src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg"
       />
     </div>
-    <div class="clr" />
   </div>
 </template>
 
 <script>
+import Links from "./Links";
+
 export default {
   name: "Home",
+  components: {
+    Links,
+  },
+  props: {
+    inputData: {
+      type: Object,
+      default: () => {
+        return {
+          id: "#home-section",
+        };
+      },
+    },
+  },
   data() {
     return {};
+  },
+  methods: {
+    clickedIcon(redirect) {
+      this.$emit("clickedIcon", redirect);
+    },
   },
 };
 </script>
