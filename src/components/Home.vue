@@ -1,5 +1,5 @@
 <template>
-  <div v-if="inputData" :id="inputData.id" class="home">
+  <div v-if="inputData" :id="navData.id" class="home">
     <div class="testleft">
       <slot name="title">
         <h3 class="home--title">Hello I'm</h3>
@@ -24,7 +24,6 @@
       </div>
     </div>
     <div class="testright">
-      <div class="home--img"></div>
       <img
         class="home--img--screenshot"
         src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg"
@@ -42,11 +41,18 @@ export default {
     Links,
   },
   props: {
-    inputData: {
+    navData: {
       type: Object,
       default: () => {
         return {
           id: "#home-section",
+        };
+      },
+    },
+    inputData: {
+      type: Object,
+      default: () => {
+        return {
           links: [
             {
               icon: '<i class="fa fa-facebook-square" />',
