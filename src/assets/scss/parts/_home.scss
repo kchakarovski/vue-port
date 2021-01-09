@@ -1,0 +1,47 @@
+.home {
+    margin-top: 7.5%;
+    display: flex;
+
+    .testleft {
+        float: left;
+        margin-left: 5%;
+    }
+
+    .testright {
+        float: right;
+        margin-right: 5%;
+    }
+
+    &--title {
+        text-shadow: 2px 2px 2px black;
+        background: rgb(112, 112, 114);
+        padding: 10px 0 10px 30px;
+        border-radius: 20px 20px 20px 0;
+        max-width: 45%;
+        min-width: 35%;
+        letter-spacing: 1px;
+        color: $white;
+    }
+
+    &--name {
+        font-weight: bold;
+        text-shadow: 2px 2px 1px white;
+        color: rgb(65, 65, 65);
+    }
+
+    &--mail,
+    &--number,
+    &--adress {
+        font-size: 19px;
+        border-bottom: 1px solid;
+        width: 101%;
+    }
+
+    &--links {}
+
+    &--img {
+        &--screenshot {
+            width: 400px
+        }
+    }
+}
