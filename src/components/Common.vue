@@ -1,6 +1,6 @@
 <template>
   <div v-if="inputData" :id="navData.id" class="home">
-    <div class="testleft">
+    <div class="home--left">
       <slot name="title">
         <h3 class="home--title">Hello I'm</h3>
       </slot>
@@ -23,7 +23,7 @@
         </div>
       </div>
     </div>
-    <div class="testright">
+    <div class="home--right">
       <img
         class="home--img--screenshot"
         src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg"
@@ -36,7 +36,7 @@
 import Links from "./Links";
 
 export default {
-  name: "Home",
+  name: "Common",
   components: {
     Links,
   },

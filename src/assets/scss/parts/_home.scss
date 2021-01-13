@@ -1,15 +1,20 @@
+.homeview{}
 .home {
-    margin-top: 7.5%;
+    margin-top: 4%;
     display: flex;
-
-    .testleft {
+    width: 100%;
+    justify-content: space-between;
+    background-image: url(https://i.redd.it/9inzucqa4fx31.png);
+    background-position: center;
+    background-size: cover;
+    .home--left {
         float: left;
         margin-left: 5%;
     }
 
-    .testright {
-        float: right;
+    .home--right {
         margin-right: 5%;
+        float: right;
     }
 
     &--title {

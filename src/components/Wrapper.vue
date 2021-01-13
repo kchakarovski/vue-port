@@ -1,13 +1,13 @@
 <template>
   <div v-if="homeInputData" class="wrapper">
-    <home :inputData="homeInputData.wrapper" @clickedIcon="clickedIcon" />
+    <common :inputData="homeInputData.wrapper" @clickedIcon="clickedIcon" />
     <about />
     <contact />
   </div>
 </template>
 
 <script>
-import Home from "./Home";
+import Common from "./Common";
 import About from "./About";
 import Contact from "./Contact";
 import { homeData } from "../static/pages";
@@ -16,7 +16,7 @@ import { mapGetters, mapActions } from "vuex";
 export default {
   name: "Wrapper",
   components: {
-    Home,
+    Common,
     About,
     Contact,
   },
