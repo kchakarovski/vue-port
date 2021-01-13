@@ -50,23 +50,13 @@ export default {
       },
     },
     inputData: {
-      type: Object,
+      type: Array,
       default: () => {
         return {
-          links: [
-            {
-              icon: '<i class="fa fa-facebook-square" />',
-              href: "/",
-            },
-            {
-              icon: '<i class="fa fa-facebook-square" />',
-              href: "/",
-            },
-            {
-              icon: '<i class="fa fa-facebook-square" />',
-              href: "/",
-            },
-          ],
+          links: {
+            icon: '<i class="fa fa-facebook-square" />',
+            href: "/",
+          },
         };
       },
     },

@@ -1,11 +1,12 @@
 <template>
-  <div class="homeview">
-    <wrapper />
+  <div v-if="homeInputData" class="homeview">
+    <wrapper @clickedIcon="clickedIcon" :inputData="homeInputData.wrapper" />
   </div>
 </template>
 
 <script>
 import Wrapper from "../components/Wrapper";
+import { mapGetters } from "vuex";
 
 export default {
   name: "Home",
@@ -14,6 +15,14 @@ export default {
   },
   data() {
     return {};
+  },
+  computed: {
+    ...mapGetters(["homeInputData"]),
+  },
+  methods: {
+    clickedIcon(redirect) {
+      window.location.href = redirect;
+    }
   },
 };
 </script>

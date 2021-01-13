@@ -13,6 +13,7 @@
 import AppHeader from "./components/AppHeader";
 import AppFooter from "./components/AppFooter";
 import { navigation } from "./static/navigation";
+import { homeData } from "./static/pages";
 import { mapGetters, mapActions } from "vuex";
 
 export default {
@@ -32,9 +33,10 @@ export default {
     ...mapGetters(["navigationInputData"]),
   },
   methods: {
-    ...mapActions(["updateNavigationData"]),
+    ...mapActions(["updateNavigationData", "updateHomeData"]),
     getData() {
       this.updateNavigationData(navigation);
+      this.updateHomeData(homeData);
     },
     clickedNavigation(scroll) {
       document.getElementById(scroll).scrollIntoView({ behavior: "smooth" });
