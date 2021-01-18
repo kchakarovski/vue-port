@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: space-evenly;
     background: rgba(255, 255, 255, 0.699);
+    animation: downIn 1.5s;
 
     :nth-child(1) {
         flex-grow: 1;

@@ -2,8 +2,10 @@
     margin: 5%;
     background: rgba(255, 255, 255, 0.699);
     position: relative;
-    padding: 10px 0 10px 0;
+    padding: 10px 30px 10px 0;
     border-radius: 4px;
+    animation: appear 1.5s;
+
     &--title {
         font-weight: bold;
         color: $black;
@@ -17,11 +19,10 @@
     &--link {
         display: flex;
         text-decoration: none;
-        text-shadow: 2px 2px 1px black;
-        color: rgb(65, 65, 65);
         background: #4267b2;
         border-radius: 4px;
-        color: white;
+        color: $white;
+        text-shadow: 2px 2px 1px black;
         font-weight: bold;
         transition: 0.4s;
         padding: 15px;
@@ -47,11 +48,19 @@
             width: 20%;
             margin: 10px;
             font-size: 18px;
+            color: $white;
+            text-shadow: 1px 1px 1px black;
             text-align: center;
             list-style: none;
             background: rgba(31, 87, 199, 0.863);
             border-radius: 4px;
             padding: 20px;
+            transition: 0.6s ease-in-out;
+            &:hover{
+                color: $black;
+                text-shadow: unset;
+                transform: scale(1.1);
+            }
         }
 
         i {

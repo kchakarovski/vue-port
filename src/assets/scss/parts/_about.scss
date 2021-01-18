@@ -4,6 +4,7 @@
         float: left;
         margin-left: 5%;
         margin-top: 7%;
+        animation: leftIn 1.5s;
 
         &--img {
             border-radius: 4px;
@@ -24,6 +25,7 @@
         background: rgba(255, 255, 255, 0.699);
         border-radius: 20px;
         padding: 0 30px 25px 30px;
+        animation: rightIn 1.5s;
     }
 
     &--title {

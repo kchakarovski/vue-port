@@ -12,6 +12,7 @@
         background: rgba(255, 255, 255, 0.699);
         border-radius: 4px;
         padding: 20px 65px 20px 65px;
+        animation: leftIn 1.5s;
 
         i {
             font-size: 25px;
@@ -28,7 +29,8 @@
         padding: 6px;
         cursor: pointer;
         transition: 0.4s ease-in-out;
-        &:hover{
+
+        &:hover {
             color: $global-hover;
         }
     }
@@ -36,6 +38,7 @@
     &--right {
         margin-right: 5%;
         float: right;
+        animation: rightIn 1.5s;
     }
 
     &--title {
