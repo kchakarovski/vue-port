@@ -4,13 +4,9 @@
     &--icon {
         color: black;
         font-size: 40px;
-        transition: 0.4s;
-        cursor: pointer;
+        transition: 0.4s ease-in-out;
         &:hover{
-            background: rgb(112, 112, 114);
-                color: white;
-                border-radius: 7px;
-                padding: 3.5px 12px 3.5px 10px;
+            color: $global-hover;
         }
     }
 }

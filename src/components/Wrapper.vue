@@ -1,6 +1,6 @@
 <template>
   <div v-if="inputData" class="wrapper">
-      <common :inputData="inputData.common" @clickedIcon="clickedIcon" />
+      <common :inputData="inputData.common" @clickedIcon="clickedIcon" @clickedArrow="clickedArrow" />
     <about :inputData="inputData.about" />
     <contact :inputData="inputData.contact" />
   </div>
@@ -75,6 +75,9 @@ export default {
     clickedIcon(redirect) {
       this.$emit("clickedIcon", redirect);
     },
+    clickedArrow(scroll) {
+      this.$emit("clickedArrow", scroll);
+    }
   },
 };
 </script>

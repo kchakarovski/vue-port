@@ -3,16 +3,17 @@
     <div class="about--sectionleft">
       <img
         class="about--sectionleft--img"
-        src="https://images.hdqwalls.com/download/small-memory-8k-2a-2932x2932.jpg"
+        src="https://i.ibb.co/1mqBzCR/second.png"
       />
     </div>
     <div class="about--sectionright">
       <h1 class="about--title" v-text="inputData.title" />
       <p class="about--paragraph" v-html="inputData.paragraph" />
       <ul class="about--ul">
+        <li>Vue</li>
+        <li>Vuex</li>
         <li>Html</li>
         <li>Css</li>
-        <li>Vue</li>
       </ul>
       <p class="about--question" v-text="inputData.question" />
       <a class="about--link" href="uploads/cve.pdf" download

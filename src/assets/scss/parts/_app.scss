@@ -1,4 +1,18 @@
-.app {}
+body {
+    background-image: url(../src/assets/img/background.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: $font-primary;
+}
+
+#app {
+    background-color: #28acc4b9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
 
 .clr {
     clear: both;

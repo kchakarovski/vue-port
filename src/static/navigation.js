@@ -1,5 +1,5 @@
 export var navigation = [{
-        id: "#home-section",
+        id: "#home-section",  //#home-section
         name: "Home",
     },
     {

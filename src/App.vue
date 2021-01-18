@@ -4,8 +4,7 @@
       @clickedNavigation="clickedNavigation"
       :inputData="navigationInputData"
     />
-    <router-view />
-
+    <router-view @clickedArrow="clickedArrow" />
     <app-footer />
   </div>
 </template>
@@ -41,6 +40,9 @@ export default {
     clickedNavigation(scroll) {
       document.getElementById(scroll).scrollIntoView({ behavior: "smooth" });
     },
+        clickedArrow(){
+      document.getElementById("app").scrollIntoView({ behavior: "smooth" });
+    }
     // clickedIcon(redirect) {
     //   window.location.href = "http://www.google.com", redirect;
     // },

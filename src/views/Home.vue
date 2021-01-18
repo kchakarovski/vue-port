@@ -1,6 +1,10 @@
 <template>
   <div v-if="homeInputData" class="homeview">
-    <wrapper @clickedIcon="clickedIcon" :inputData="homeInputData.wrapper" />
+    <wrapper
+      @clickedIcon="clickedIcon"
+      @clickedArrow="clickedArrow"
+      :inputData="homeInputData.wrapper"
+    />
   </div>
 </template>
 
@@ -22,7 +26,10 @@ export default {
   methods: {
     clickedIcon(redirect) {
       window.location.href = redirect;
-    }
+    },
+    clickedArrow() {
+      this.$emit("clickedArrow");
+    },
   },
 };
 </script>

@@ -17,7 +17,7 @@
         </p>
         <p class="home--adress">Macedonia, Nikola Karev 19 Resen</p>
       </slot>
-      <div class="links">
+      <div class="home--links">
         <div v-for="(value, key) in inputData.links" :key="key">
           <links :inputData="value" @clickedIcon="clickedIcon" />
         </div>
@@ -26,9 +26,12 @@
     <div class="home--right">
       <img
         class="home--img--screenshot"
-        src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg"
+        src="https://i.ibb.co/84J1q3S/first.gif"
       />
     </div>
+    <slot name="arrow">
+      <div class="home--arrow" @click="toggleArrow()"><i class="fa fa-arrow-up" /></div>
+    </slot>
   </div>
 </template>
 
@@ -68,6 +71,9 @@ export default {
     clickedIcon(redirect) {
       this.$emit("clickedIcon", redirect);
     },
+    toggleArrow(scroll){
+      this.$emit("clickedArrow", scroll)
+    }
   },
 };
 </script>
