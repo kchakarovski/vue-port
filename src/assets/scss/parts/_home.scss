@@ -65,7 +65,10 @@
         width: 101%;
     }
 
-    &--links {}
+    &--links {
+        display: flex;
+        justify-content: space-around;
+    }
 
     &--img {
         display: flex;

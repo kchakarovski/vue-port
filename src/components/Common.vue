@@ -18,7 +18,7 @@
         <p class="home--adress">Macedonia, Nikola Karev 19 Resen</p>
       </slot>
       <div class="home--links">
-        <div v-for="(value, key) in inputData.links" :key="key">
+        <div v-for="(value, key) in inputData" :key="key">
           <links :inputData="value" @clickedIcon="clickedIcon" />
         </div>
       </div>

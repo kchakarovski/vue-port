@@ -1,12 +1,13 @@
 .links {
-    display: flex;
-    justify-content: space-around;
     &--icon {
-        color: black;
-        font-size: 40px;
         transition: 0.4s ease-in-out;
+        cursor: pointer;
+        i{
+            font-size: 35px;
+        }
         &:hover{
             color: $global-hover;
+            transform: scale(1.3);
         }
     }
 }
