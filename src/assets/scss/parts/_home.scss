@@ -1,20 +1,49 @@
-.home {
-    margin-top: 7.5%;
-    display: flex;
+.homeview {}
 
-    .testleft {
+.home {
+    margin-top: 8%;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    &--left {
         float: left;
         margin-left: 5%;
+        background: rgba(255, 255, 255, 0.699);
+        border-radius: 4px;
+        padding: 20px 65px 20px 65px;
+        animation: leftIn 1.5s;
+
+        i {
+            font-size: 25px;
+        }
     }
 
-    .testright {
-        float: right;
+    &--arrow {
+        font-size: 20px;
+        position: fixed;
+        top: 87%;
+        left: 96.5%;
+        background: white;
+        border-radius: 50%;
+        padding: 6px;
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+
+        &:hover {
+            color: $global-hover;
+        }
+    }
+
+    &--right {
         margin-right: 5%;
+        float: right;
+        animation: rightIn 1.5s;
     }
 
     &--title {
         text-shadow: 2px 2px 2px black;
-        background: rgb(112, 112, 114);
+        background: #4267b2;
         padding: 10px 0 10px 30px;
         border-radius: 20px 20px 20px 0;
         max-width: 45%;
@@ -25,23 +54,29 @@
 
     &--name {
         font-weight: bold;
-        text-shadow: 2px 2px 1px white;
-        color: rgb(65, 65, 65);
+        color: $black;
     }
 
     &--mail,
     &--number,
     &--adress {
-        font-size: 19px;
+        font-size: 20px;
         border-bottom: 1px solid;
         width: 101%;
     }
 
-    &--links {}
+    &--links {
+        display: flex;
+        justify-content: space-around;
+    }
 
     &--img {
+        display: flex;
+
         &--screenshot {
-            width: 400px
+            width: 300px;
+            margin-top: 100px;
+            border-radius: 4px;
         }
     }
 }

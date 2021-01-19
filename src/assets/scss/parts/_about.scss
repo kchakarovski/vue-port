@@ -1,18 +1,19 @@
 .about {
-    margin-top: 1%;
 
     &--sectionleft {
         float: left;
         margin-left: 5%;
         margin-top: 7%;
+        animation: leftIn 1.5s;
 
         &--img {
             border-radius: 4px;
             width: 300px;
-            height: auto;
+            height: 581px;
             float: left;
-            margin-top: 7%;
             display: block;
+            transform: scaleX(-1);
+            position: absolute;
         }
     }
 
@@ -21,14 +22,17 @@
         margin-top: 5%;
         width: 50%;
         margin-right: 5%;
+        background: rgba(255, 255, 255, 0.699);
+        border-radius: 20px;
+        padding: 0 30px 25px 30px;
+        animation: rightIn 1.5s;
     }
 
     &--title {
         display: flex;
         justify-content: flex-start;
         font-weight: bold;
-        text-shadow: 2px 2px 1px white;
-        color: rgb(65, 65, 65);
+        color: $black;
     }
 
     &--paragraph {

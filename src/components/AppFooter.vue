@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <h3 class="footer--title">Krste Cakarovski CV &copy;</h3>
+    <h3 class="footer--title">Krste Cakarovski {{currentYear}}  &copy; All right reserved</h3>
     <a class="footer--link" href="#"><i class="fa fa-twitter-square" /></a>
     <a
       class="footer--link"
@@ -20,7 +20,9 @@
 export default {
   name: "AppFooter",
   data() {
-    return {};
+    return {
+      currentYear: new Date().getFullYear(),
+    };
   },
 };
 </script>

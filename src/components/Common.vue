@@ -1,6 +1,6 @@
 <template>
   <div v-if="inputData" :id="navData.id" class="home">
-    <div class="testleft">
+    <div class="home--left">
       <slot name="title">
         <h3 class="home--title">Hello I'm</h3>
       </slot>
@@ -17,18 +17,21 @@
         </p>
         <p class="home--adress">Macedonia, Nikola Karev 19 Resen</p>
       </slot>
-      <div class="links">
-        <div v-for="(value, key) in inputData.links" :key="key">
+      <div class="home--links">
+        <div v-for="(value, key) in inputData" :key="key">
           <links :inputData="value" @clickedIcon="clickedIcon" />
         </div>
       </div>
     </div>
-    <div class="testright">
+    <div class="home--right">
       <img
         class="home--img--screenshot"
-        src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg"
+        src="https://i.ibb.co/84J1q3S/first.gif"
       />
     </div>
+    <slot name="arrow">
+      <div class="home--arrow" @click="toggleArrow()"><i class="fa fa-arrow-up" /></div>
+    </slot>
   </div>
 </template>
 
@@ -36,7 +39,7 @@
 import Links from "./Links";
 
 export default {
-  name: "Home",
+  name: "Common",
   components: {
     Links,
   },
@@ -50,23 +53,13 @@ export default {
       },
     },
     inputData: {
-      type: Object,
+      type: Array,
       default: () => {
         return {
-          links: [
-            {
-              icon: '<i class="fa fa-facebook-square" />',
-              href: "/",
-            },
-            {
-              icon: '<i class="fa fa-facebook-square" />',
-              href: "/",
-            },
-            {
-              icon: '<i class="fa fa-facebook-square" />',
-              href: "/",
-            },
-          ],
+          links: {
+            icon: '<i class="fa fa-facebook-square" />',
+            href: "/",
+          },
         };
       },
     },
@@ -78,6 +71,9 @@ export default {
     clickedIcon(redirect) {
       this.$emit("clickedIcon", redirect);
     },
+    toggleArrow(scroll){
+      this.$emit("clickedArrow", scroll)
+    }
   },
 };
 </script>

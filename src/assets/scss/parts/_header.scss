@@ -1,15 +1,27 @@
 .header {
     display: flex;
     justify-content: space-evenly;
+    position: fixed;
+    width: 100%;
+    padding: 10px 0 10px 0;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.925);
+    z-index: 9999;
 
     &--item {
         font-size: 20px;
         font-weight: bold;
         transition: 0.4s ease-in-out;
-        color: $brand-primary;
-        &:hover{
-            color: $brand-tertiary;
+        color: $black;
+
+        &:hover {
+            color: $global-hover;
             font-weight: bolder;
+        }
+
+        :focus {
+            color: orange;
         }
     }
 
@@ -17,23 +29,4 @@
         cursor: pointer;
     }
 
-    // ul {
-    //     list-style: none;
-    //     display: flex;
-    //     justify-content: space-around;
-    // }
-
-    // li {
-    //     font-size: 20px;
-    //     font-weight: bold;
-    //     transition: 0.7s;
-    //     color: $brand-primary;
-    //     cursor: pointer;
-
-    //     &:hover {
-    //         font-size: 21px;
-    //         color: $brand-tertiary;
-    //         font-weight: bolder;
-    //     }
-    // }
 }
