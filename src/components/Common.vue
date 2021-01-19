@@ -26,7 +26,7 @@
     <div class="home--right">
       <img
         class="home--img--screenshot"
-        src="https://i.ibb.co/84J1q3S/first.gif"
+        src="https://icodebreakers.org/blog/wp-content/uploads/2017/12/logo-maker-1.gif"
       />
     </div>
     <slot name="arrow">

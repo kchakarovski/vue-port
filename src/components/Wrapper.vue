@@ -1,10 +1,12 @@
 <template>
   <div v-if="inputData" class="wrapper">
+    <slot name="common">
     <common
       :inputData="inputData.common"
       @clickedIcon="clickedIcon"
       @clickedArrow="clickedArrow"
     />
+    </slot>
     <about :inputData="inputData.about" />
     <contact :inputData="inputData.contact" />
   </div>
