@@ -27,9 +27,6 @@ export default {
     clickedIcon(redirect) {
       window.location.href = redirect;
     },
-    clickedArrow() {
-      this.$emit("clickedArrow");
-    },
   },
 };
 </script>

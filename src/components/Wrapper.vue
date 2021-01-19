@@ -1,6 +1,10 @@
 <template>
   <div v-if="inputData" class="wrapper">
-      <common :inputData="inputData.common" @clickedIcon="clickedIcon" @clickedArrow="clickedArrow" />
+    <common
+      :inputData="inputData.common"
+      @clickedIcon="clickedIcon"
+      @clickedArrow="clickedArrow"
+    />
     <about :inputData="inputData.about" />
     <contact :inputData="inputData.contact" />
   </div>
@@ -51,31 +55,16 @@ export default {
       },
     },
   },
-  // mounted() {
-  //   this.getData();
-  // },
   data() {
     return {};
   },
-  // computed: {
-  //   ...mapGetters(["homeInputData"]),
-  // },
-  // methods: {
-  //   ...mapActions(["updateHomeData"]),
-  //   getData() {
-  //     this.updateHomeData(homeData);
-  //   },
-  //   clickedIcon(redirect) {
-  //     window.location.href = redirect;
-  //   },
-  // },
   methods: {
     clickedIcon(redirect) {
       this.$emit("clickedIcon", redirect);
     },
     clickedArrow(scroll) {
       this.$emit("clickedArrow", scroll);
-    }
+    },
   },
 };
 </script>

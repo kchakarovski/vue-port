@@ -39,9 +39,6 @@ export default {
     },
     clickedNavigation(scroll) {
       document.getElementById(scroll).scrollIntoView({ behavior: "smooth" });
-    },
-        clickedArrow(){
-      document.getElementById("app").scrollIntoView({ behavior: "smooth" });
     }
     // clickedIcon(redirect) {
     //   window.location.href = "http://www.google.com", redirect;
