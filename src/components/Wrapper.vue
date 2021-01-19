@@ -10,8 +10,6 @@
 import Common from "./Common";
 import About from "./About";
 import Contact from "./Contact";
-// import { homeData } from "../static/pages";
-// import { mapGetters, mapActions } from "vuex";
 
 export default {
   name: "Wrapper",
