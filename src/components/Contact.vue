@@ -45,16 +45,16 @@ export default {
       default: () => {
         return {
           id: "#contact-section",
-          title:"Title",
-          email:"Mail",
-          phone:"Phone",
-          adress:"Adress",
+          title: "Title",
+          email: "Mail",
+          phone: "Phone",
+          adress: "Adress"
         };
-      },
-    },
+      }
+    }
   },
   data() {
     return {};
-  },
+  }
 };
 </script>

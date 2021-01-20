@@ -3,6 +3,9 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import "./mixins";
+import VueTypedjs from "vue-typed-js";
+
+Vue.use(VueTypedjs);
 
 Vue.config.productionTip = false;
 

@@ -1,11 +1,16 @@
 <template>
   <div v-if="inputData" class="wrapper">
-    <common
-      :inputData="inputData.common"
-      @clickedIcon="clickedIcon"
-      @clickedArrow="clickedArrow"
-    />
+    <slot name="common">
+      <common
+        :inputData="inputData.common"
+        @clickedIcon="clickedIcon"
+        @clickedArrow="clickedArrow"
+      />
+    </slot>
     <about :inputData="inputData.about" />
+      <div v-for="(value, key) in inputData.projects" :key="key">
+      <projects :inputData="value" @clickedProject="clickedProject" />
+      </div>
     <contact :inputData="inputData.contact" />
   </div>
 </template>
@@ -13,6 +18,7 @@
 <script>
 import Common from "./Common";
 import About from "./About";
+import Projects from "./Projects";
 import Contact from "./Contact";
 
 export default {
@@ -20,6 +26,7 @@ export default {
   components: {
     Common,
     About,
+    Projects,
     Contact,
   },
   props: {
@@ -51,6 +58,17 @@ export default {
             phone: "Phone",
             adress: "Adress",
           },
+          projects: [
+            {
+              title: "Title",
+              images:
+                "https://i.ibb.co/Kz48yyh/E-Developer-design-random-index-html-1.png",
+              tooltip: "some tooltip",
+              link: "/",
+              btnText: "Project",
+              currentIndex: 0,
+            }
+          ],
         };
       },
     },
@@ -64,6 +82,9 @@ export default {
     },
     clickedArrow(scroll) {
       this.$emit("clickedArrow", scroll);
+    },
+    clickedProject(redirect) {
+      this.$emit("clickedProject", redirect);
     },
   },
 };

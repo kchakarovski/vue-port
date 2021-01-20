@@ -1,7 +1,11 @@
 <template>
   <div v-if="inputData" class="header">
     <div class="header--item" v-for="(value, key) in inputData" :key="key">
-      <a class="header--link" v-text="value.name" @click="toggleNavigationItem(value.id)" />
+      <a
+        class="header--link"
+        v-text="value.name"
+        @click="toggleNavigationItem(value.id)"
+      />
     </div>
   </div>
 </template>
@@ -15,11 +19,11 @@ export default {
         return [
           {
             id: "#page",
-            name: "Home",
-          },
+            name: "Home"
+          }
         ];
-      },
-    },
+      }
+    }
   },
   name: "AppHeader",
   data() {
@@ -28,7 +32,7 @@ export default {
   methods: {
     toggleNavigationItem(scroll) {
       this.$emit("clickedNavigation", scroll);
-    },
-  },
+    }
+  }
 };
 </script>

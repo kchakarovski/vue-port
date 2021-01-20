@@ -32,17 +32,16 @@ export default {
       default: () => {
         return {
           id: "#about-section",
-          title:"About me",
-          paragraph:
-            "Paragraph",
+          title: "About me",
+          paragraph: "Paragraph",
           // language:"",
-          question:"Do you want to know more about me?",
+          question: "Do you want to know more about me?"
         };
-      },
-    },
+      }
+    }
   },
   data() {
     return {};
-  },
+  }
 };
 </script>

@@ -18,7 +18,7 @@ import { mapGetters, mapActions } from "vuex";
 export default {
   components: {
     AppHeader,
-    AppFooter,
+    AppFooter
   },
   mounted() {
     this.getData();
@@ -29,7 +29,7 @@ export default {
     return {};
   },
   computed: {
-    ...mapGetters(["navigationInputData"]),
+    ...mapGetters(["navigationInputData"])
   },
   methods: {
     ...mapActions(["updateNavigationData", "updateHomeData"]),
@@ -43,7 +43,7 @@ export default {
     // clickedIcon(redirect) {
     //   window.location.href = "http://www.google.com", redirect;
     // },
-  },
+  }
 };
 </script>
 <style lang="scss">

@@ -1,14 +1,15 @@
 .homeview {}
 
 .home {
-    margin-top: 8%;
+    margin-top: 10%;
     display: flex;
     width: 100%;
     justify-content: space-between;
 
     &--left {
+        position: relative;
+        left: 6vh;
         float: left;
-        margin-left: 5%;
         background: rgba(255, 255, 255, 0.699);
         border-radius: 4px;
         padding: 20px 65px 20px 65px;
@@ -36,9 +37,12 @@
     }
 
     &--right {
-        margin-right: 5%;
+        position: relative;
         float: right;
+        -webkit-animation: rightIn 1.5s;
         animation: rightIn 1.5s;
+        right: 5.5vh;
+        top: 5vh;
     }
 
     &--title {
@@ -55,6 +59,7 @@
     &--name {
         font-weight: bold;
         color: $black;
+        min-height: 10vh;
     }
 
     &--mail,
@@ -72,11 +77,13 @@
 
     &--img {
         display: flex;
-
         &--screenshot {
+            position: relative;
+            right: 4.5vh;
             width: 300px;
-            margin-top: 100px;
             border-radius: 4px;
+            background: #64AAFF;
+            padding: 20px 20px 40px 20px;
         }
     }
 }

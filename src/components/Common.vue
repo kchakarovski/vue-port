@@ -26,11 +26,13 @@
     <div class="home--right">
       <img
         class="home--img--screenshot"
-        src="https://i.ibb.co/84J1q3S/first.gif"
+        src="https://icodebreakers.org/blog/wp-content/uploads/2017/12/logo-maker-1.gif"
       />
     </div>
     <slot name="arrow">
-      <div class="home--arrow" @click="toggleArrow()"><i class="fa fa-arrow-up" /></div>
+      <div class="home--arrow" @click="toggleArrow()">
+        <i class="fa fa-arrow-up" />
+      </div>
     </slot>
   </div>
 </template>
@@ -41,16 +43,16 @@ import Links from "./Links";
 export default {
   name: "Common",
   components: {
-    Links,
+    Links
   },
   props: {
     navData: {
       type: Object,
       default: () => {
         return {
-          id: "#home-section",
+          id: "#home-section"
         };
-      },
+      }
     },
     inputData: {
       type: Array,
@@ -58,11 +60,11 @@ export default {
         return {
           links: {
             icon: '<i class="fa fa-facebook-square" />',
-            href: "/",
-          },
+            href: "/"
+          }
         };
-      },
-    },
+      }
+    }
   },
   data() {
     return {};
@@ -71,9 +73,9 @@ export default {
     clickedIcon(redirect) {
       this.$emit("clickedIcon", redirect);
     },
-    toggleArrow(scroll){
-      this.$emit("clickedArrow", scroll)
+    toggleArrow(scroll) {
+      this.$emit("clickedArrow", scroll);
     }
-  },
+  }
 };
 </script>
