@@ -20,10 +20,10 @@ export default {
       default: () => {
         return {
           icon: '<i class="fa fa-facebook-square" />',
-          href: "/",
+          href: "/"
         };
-      },
-    },
+      }
+    }
   },
   data() {
     return {};
@@ -31,10 +31,9 @@ export default {
   methods: {
     toggleIconLink(redirect) {
       this.$emit("clickedIcon", redirect);
-    },
-  },
+    }
+  }
 };
 </script>
 
-<style>
-</style>
+<style></style>

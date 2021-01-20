@@ -1,4 +1,4 @@
 export default {
   navigation: null,
-  home: null,
+  home: null
 };

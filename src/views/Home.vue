@@ -3,6 +3,7 @@
     <wrapper
       @clickedIcon="clickedIcon"
       @clickedArrow="clickedArrow"
+      @clickedProject="clickedProject"
       :inputData="homeInputData.wrapper"
     >
       <template v-slot:common>
@@ -12,7 +13,14 @@
           @clickedArrow="clickedArrow"
         >
           <template v-slot:name>
-            <vue-typed-js class="home--name" :strings="['Крсте Чакаровски']" :loop="true" :backDelay="2000" :typeSpeed="90" :backSpeed="110">
+            <vue-typed-js
+              class="home--name"
+              :strings="['Крсте Чакаровски']"
+              :loop="true"
+              :backDelay="2000"
+              :typeSpeed="90"
+              :backSpeed="110"
+            >
               <h2 class="typing"></h2>
             </vue-typed-js>
           </template>
@@ -39,13 +47,8 @@ export default {
   computed: {
     ...mapGetters(["homeInputData"]),
   },
-  methods: {
-    clickedIcon(redirect) {
-      window.location.href = redirect;
-    },
-  },
+  methods: {},
 };
 </script>
 
-<style>
-</style>
+<style></style>
